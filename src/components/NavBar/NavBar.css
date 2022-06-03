@@ -1,0 +1,17 @@
+.nav_main{
+    color: #222;
+    font-size: 2vmax;
+    width: 100%;
+    background-color: #777;
+    height: 5vmax;
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+.ul_main{
+    display: flex;
+    font: 1em sans-serif;
+    color: #33a;
+    width: 100%;
+    justify-content: space-around;
+}
