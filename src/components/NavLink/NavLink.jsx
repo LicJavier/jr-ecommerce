@@ -1,3 +1,10 @@
-export default function NavLink(tittle) {
-    return <li>{tittle}</li>
+import "./NavLink.css";
+
+export default function NavLink({title, handleOnClick}) {
+    
+    return (
+        <li onClick={handleOnClick}>
+            {title}
+        </li>
+    )
 }

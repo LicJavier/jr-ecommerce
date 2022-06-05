@@ -1,11 +1,11 @@
 import NavBar from './components/NavBar/NavBar';
-import TituloMain from './components/TituloMain/TituloMain';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
-      <TituloMain/>
+      <ItemListContainer/>
     </div>
   );
 }

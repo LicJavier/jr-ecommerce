@@ -1,0 +1,12 @@
+.container__carrito{
+    display: flex;
+    width: 5vmax;
+    justify-content: space-around;
+    align-items: center;
+}
+.icono__carrito{
+    box-sizing: border-box;
+}
+.numero__carrito{
+    font-size: 1.5vmax;
+}

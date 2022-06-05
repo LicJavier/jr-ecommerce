@@ -1,13 +1,15 @@
-export default function CartWidget(handleOnClick) {
+import "./CartWidget.css";
+
+export default function CartWidget({handleOnClick}) {
     let cantidad = 0;
     return (
-        <div>
-        <li onClick={handleOnClick}>
-            <img alt="carrito" />
-        </li>
-        <li>
+        <div className="container__carrito">
+        <div className="icono__carrito">
+            <box-icon className='bx bxs-like bx-xs' name='cart' onClick={handleOnClick}></box-icon>
+        </div>
+        <div className="numero__carrito">
             {cantidad}
-        </li>
+        </div>
         </div>
     )
 }

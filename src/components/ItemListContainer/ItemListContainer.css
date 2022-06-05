@@ -1,0 +1,12 @@
+.titulo__principal{
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+.titulo__secundario{
+    font-size: 2em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
