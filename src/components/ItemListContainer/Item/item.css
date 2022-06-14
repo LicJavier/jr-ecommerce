@@ -1,0 +1,16 @@
+.container__item{
+    margin: 1vmax;
+}
+.container__item h4{
+    margin: 0.5em;
+}
+.container__item h5{
+    margin: 0.5em;
+}
+.container__item span{
+    margin: 1em;
+    
+}
+.container-fluid{
+    margin: 1em;
+}

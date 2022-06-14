@@ -1,13 +1,4 @@
-.titulo__principal{
-    font-size: 3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    margin-top: 0;
-}
-.titulo__secundario{
-    font-size: 2em;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.item__list{
+    display: flex;
+    flex-direction: row;
 }

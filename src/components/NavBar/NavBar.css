@@ -1,14 +1,15 @@
 .nav_main{
     color: #222;
     width: 100%;
-    background-color: #777;
+    background-color: #f228;
     align-items: center;
     display: flex;
+    padding: 1vmax;
 }
 .ul_main{
     display: flex;
     font: 1vmax sans-serif;
-    color: #33a;
+    color: #222;
     width: 100%;
     justify-content: space-around;
     align-items: center;

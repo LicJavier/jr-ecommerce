@@ -1,0 +1,14 @@
+.item__mandalas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em;
+    background-color: #f228;
+    text-align: center;
+    justify-content: space-around;
+}
+img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}

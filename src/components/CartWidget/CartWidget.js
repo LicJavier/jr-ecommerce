@@ -1,4 +1,5 @@
 import "./CartWidget.css";
+import 'boxicons';
 
 export default function CartWidget({handleOnClick}) {
     let cantidad = 0;
