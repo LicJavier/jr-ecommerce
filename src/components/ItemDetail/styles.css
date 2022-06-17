@@ -1,0 +1,10 @@
+.container__detalle{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #2F2;
+    padding: 3vmax;
+    font-size: 2vmax;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

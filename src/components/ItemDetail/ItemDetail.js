@@ -1,21 +1,18 @@
 import React from "react";
-import CountContainer from "../../CountContainer/CountContainer";
-import './item.css';
+import "./styles.css";
 
-export default function Item({ item }) {
+export default function ItemDetail({ item }) {
     return(
-        <div>
+        <div className="container__detalle">
             <div>
                 <img src={item.img} alt={item.categoria} />
             </div>
             <div className="container__item">
-                <h4>{item.name}</h4>
+                <h3>{item.name}</h3>
                 <h5>${item.price}</h5>
                 <h5>Stock: {item.stock}.</h5>
-                <span>Descripción: {item.description}</span>
+                <p>Descripción: {item.description}</p>
             </div>
-            <CountContainer />
         </div>
     )
 }
-

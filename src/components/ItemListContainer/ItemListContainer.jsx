@@ -1,5 +1,5 @@
-import ItemList from "./ItemList/ItemList";
-import { productos } from '../../data/Json/productos'
+import ItemList from "../ItemList/ItemList";
+import { productos } from '../../data/Json/productos';
 import "./ItemListContainer.css";
 import { useState,useEffect } from "react";
 
