@@ -6,7 +6,7 @@ export default function CartWidget({handleOnClick}) {
     return (
         <div className="container__carrito">
         <div className="icono__carrito">
-            <box-icon className='bx bxs-like bx-xs' name='cart' onClick={handleOnClick}></box-icon>
+            <img id="logo__carrito" src="./cart.png" alt="logo carrito" onClick={handleOnClick} />
         </div>
         <div className="numero__carrito">
             {cantidad}

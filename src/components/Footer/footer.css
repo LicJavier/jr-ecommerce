@@ -1,0 +1,30 @@
+.container__footer{
+    display: flex;
+    margin: 0;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f8;
+    font-size: 2vmax;
+    flex-wrap: wrap;
+}
+.container__footer p{
+    margin: .5rem;
+    font-size: 1.5em;
+}
+ul.container__footer_ul{
+    display: flex;
+    padding: 0;
+    height: 5vmax;
+    justify-content: space-around;
+}
+ul.container__footer_ul li{
+    list-style-type: none;
+    
+}
+ul.container__footer_ul li img{
+    width: 3vmax;
+    height: 3vmax;
+    margin: .5em;
+}
+

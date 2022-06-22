@@ -1,20 +1,23 @@
 import React from "react";
-import CountContainer from "../CountContainer/CountContainer";
 import './item.css';
+import { Link } from "react-router-dom";
 
 export default function Item({ item }) {
+
+    const urlDetalle = `/item/${item.id}`;
+
     return(
         <div>
-            <div>
+            <div className="container__componente__item">
                 <img src={item.img} alt={item.categoria} />
             </div>
             <div className="container__item">
                 <h4>{item.name}</h4>
                 <h5>${item.price}</h5>
-                <h5>Stock: {item.stock}.</h5>
-                <span>Descripción: {item.description}</span>
+                <Link to={urlDetalle}>
+                    <button className="button">Ver Detalle</button>
+                </Link>
             </div>
-            <CountContainer />
         </div>
     )
 }

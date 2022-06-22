@@ -1,12 +1,14 @@
 .container__carrito{
     display: flex;
-    width: 5vmax;
     justify-content: space-around;
     align-items: center;
 }
-.icono__carrito{
-    box-sizing: border-box;
+.container__carrito .icono__carrito img#logo__carrito{
+    height: 3vmax;
+    width: 3vmax;
+    margin: 0.5 vmax;
 }
 .numero__carrito{
-    font-size: 1.5vmax;
+    font-size: 3vmax;
+    margin: 0.5vmax;
 }

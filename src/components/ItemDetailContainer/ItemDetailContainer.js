@@ -1,14 +1,17 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { productos } from '../../data/Json/productos';
-import { useState,useEffect } from "react";
+import React, { useState,useEffect } from "react";
+import { useParams} from "react-router-dom";
 
 export default function ItemDetailContainer() {
     const [product,SetProduct] = useState([]);
+    const {id} = useParams();
+
     useEffect(
         ()=>{
             const traerProducto = new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve(productos[2])
+                    resolve(productos[id])
                 }, 2000);
             })
             traerProducto.then((res)=>{

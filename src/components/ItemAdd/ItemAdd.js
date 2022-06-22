@@ -11,5 +11,5 @@ function agregandoAlCarrito() {
 }
 
 export default function ItemAdd() {
-    return <button onClick={agregandoAlCarrito} >Agregar al Carrito</button>
+    return <button className='button' onClick={agregandoAlCarrito} >Agregar al Carrito</button>
 }

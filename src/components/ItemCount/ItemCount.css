@@ -1,18 +1,9 @@
-.container__item{
-    margin: 1vmax;
+.itemCount{
+    display: flex;
+    flex-direction: row;
 }
-.container__item h4{
-    margin: 0.5em;
-}
-.container__item h5{
-    margin: 0.5em;
-}
-.container__item span{
-    margin: 1em;
-    
-}
-.container-fluid{
-    margin: 1em;
+.contador{
+    font-size: 1vmax;
 }
 /* From uiverse.io by @satyamchaudharydev */
 /* inspired form gumroad website */
@@ -26,20 +17,16 @@
     padding: 0.8em 2em;
     background: var(--bg);
     transition: 0.2s;
-}
-
-.button:hover {
+  }
+  
+  .button:hover {
     color: var(--hover-text);
     transform: translate(-0.25rem,-0.25rem);
     background: var(--hover-bg);
     box-shadow: 0.25rem 0.25rem var(--bg);
-}
-
-.button:active {
+  }
+  
+  .button:active {
     transform: translate(0);
     box-shadow: none;
-}
-
-.container__componente__item{
-    margin: 3rem;
-}
+  }

@@ -4,7 +4,6 @@
     background-color: #f228;
     align-items: center;
     display: flex;
-    padding: 1vmax;
 }
 .ul_main{
     display: flex;
@@ -15,7 +14,15 @@
     align-items: center;
     height: 100%;
     margin: 0;
+    flex-wrap: wrap;
 }
-.ul_main li{
+.ul_main a{
     list-style: none;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #222;
+}
+.ul_main img#logo__brand{
+    width: 15vmax;
+    height: 10vmax;
 }

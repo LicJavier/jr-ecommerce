@@ -29,9 +29,9 @@ export default function ItemCount({stock, initial}) {
     }
     return (
         <div className="itemCount">
-            <button className="botonResta" onClick={resta}>-</button>
-            <spam className="contador">{count} </spam>
-            <button className="botonSuma" onClick={suma}>+</button>
+            <button className="botonResta button" onClick={resta}>-</button>
+            <span className="contador">{count} </span>
+            <button className="botonSuma button" onClick={suma}>+</button>
         </div>
     )
 }

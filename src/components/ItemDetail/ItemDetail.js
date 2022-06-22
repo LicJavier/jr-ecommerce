@@ -1,7 +1,9 @@
 import React from "react";
 import "./styles.css";
+import CountContainer from "../CountContainer/CountContainer";
 
 export default function ItemDetail({ item }) {
+    
     return(
         <div className="container__detalle">
             <div>
@@ -12,6 +14,7 @@ export default function ItemDetail({ item }) {
                 <h5>${item.price}</h5>
                 <h5>Stock: {item.stock}.</h5>
                 <p>Descripción: {item.description}</p>
+                <CountContainer />
             </div>
         </div>
     )

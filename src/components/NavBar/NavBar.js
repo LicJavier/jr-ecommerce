@@ -1,19 +1,21 @@
 import "./NavBar.css";
-import NavLink from "../NavLink/NavLink";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 export default function navBar() {
     
     function handleClick() {
-        console.log("click")
+        
     }
 
     return (
         <nav className="nav_main">
             <ul className="ul_main">
-                <NavLink handleOnClick={handleClick} title="Productos"/>
-                <NavLink handleOnClick={handleClick} title="Servicios"/>
-                <NavLink handleOnClick={handleClick} title="Contacto"/>
+                <NavLink to="/"><img id="logo__brand" src="./logo.jpeg" alt="logo" /> </NavLink>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/category/mandalas">Mandalas</NavLink>
+                <NavLink to="/category/atrapasueños">Atrapasueños</NavLink>
+                <NavLink to="/contact">Contacto</NavLink>
                 <CartWidget handleOnClick={handleClick} />
             </ul>
         </nav>
