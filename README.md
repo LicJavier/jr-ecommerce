@@ -9,3 +9,8 @@
 7. Se instalo webpack de bootStrap box-icons y sweetAlert.
 8. Se agrego img con el brand para navegar al home según la rubrica (Logo en proceso de edición).
 
+26/06/2022
+
+1.Se eliminó el componente ItemAdd y se unificó con el componente ItemCount.
+2.Se agrego el evento onAdd para almacenar el producto y el valor.
+3.Se agrego un condicional para que después de agregar un producto se muestre el boton ir al carrito que navega a /Cart.

@@ -8,3 +8,11 @@
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.container__boton__comprar{
+    margin: 1em;
+    height: 1em;
+}
+.container__boton__comprar  a.button.botonComprar {
+    text-decoration: none;
+    font-size: 1vmax;
+}

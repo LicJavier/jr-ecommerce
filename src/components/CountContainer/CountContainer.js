@@ -1,13 +1,10 @@
-import React from "react";
-import ItemAdd from "../ItemAdd/ItemAdd";
 import ItemCount from "../ItemCount/ItemCount";
 
+export default function CountContainer({ stock, item }) {
 
-export default function CountContainer() {
     return (
         <div className="container-fluid">
-            <ItemCount stock={5} initial={1}/>
-            <ItemAdd />
+            <ItemCount stock={ stock } initial={ 1 } item={ item } />
         </div>
     )
 }
