@@ -1,8 +1,10 @@
-import React from "react";
 import "./styles.css";
-import CountContainer from "../CountContainer/CountContainer";
+import CountContainer from "../countContainer/CountContainer";
+
 
 export default function ItemDetail({ item }) {
+
+    
 
     return(
         <div className="container__detalle">

@@ -1,28 +1,34 @@
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Title from './components/Title/Title';
+import NavBar from './components/navBar/NavBar';
+import ItemListContainer from './components/itemListContainer/ItemListContainer';
+import Title from './components/title/Title';
 import "./App.css";
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer/Footer';
-import Contact from './components/Contact/Contact';
-import Cart from './components/Cart/Cart';
+import Footer from './components/footer/Footer';
+import Contact from './components/contact/Contact';
+import Cart from './components/cart/Cart';
+import Nosotros from './components/nosotros/Nosotros';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar/>
-        <Title />
-        <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/category/:idCategoria' element={<ItemListContainer />} />
-          <Route path='/item/:id' element={<ItemDetailContainer />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/cart' element={<Cart />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar/>
+          <Title />
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/category/:idCategoria' element={<ItemListContainer />} />
+            <Route path='/item/:id' element={<ItemDetailContainer />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/nosotros' element={<Nosotros />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
+      
     </div>
   );
 }

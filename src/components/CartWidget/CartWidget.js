@@ -1,15 +1,18 @@
-import "./CartWidget.css";
+import "./cartWidget.css";
 import 'boxicons';
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export default function CartWidget({handleOnClick}) {
-    let cantidad = 0;
+    const { cart } = useContext(CartContext)
+    
     return (
         <div className="container__carrito">
         <div className="icono__carrito">
-            <img id="logo__carrito" src="../cart.png" alt="logo carrito" onClick={handleOnClick} />
+            <img id="logo__carrito" src="../images/cart.png" alt="logo carrito" onClick={handleOnClick} />
         </div>
         <div className="numero__carrito">
-            {cantidad}
+            {cart.length}
         </div>
         </div>
     )

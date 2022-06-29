@@ -1,4 +1,5 @@
-import ItemCount from "../ItemCount/ItemCount";
+import ItemCount from "../itemCount/ItemCount";
+import "./countContainer.css"
 
 export default function CountContainer({ stock, item }) {
 

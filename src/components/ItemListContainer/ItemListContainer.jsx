@@ -1,6 +1,6 @@
-import ItemList from "../ItemList/ItemList";
+import ItemList from "../itemList/ItemList";
 import { productos } from '../../data/Json/productos';
-import "./ItemListContainer.css";
+import "./styles.css"
 import { useState,useEffect } from "react";
 import {useParams} from "react-router-dom"
 
@@ -21,7 +21,7 @@ export default function ItemListContainer() {
                         })
                         resolve(buscarItems);
                     }
-                }, 2000);
+                }, 500);
             })
 
             traerProducto.then((res)=>{

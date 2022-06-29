@@ -1,22 +1,22 @@
-import React, {useState} from "react"
+import React, {useContext, useState} from "react"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { Link } from "react-router-dom";
-
+import { CartContext } from "../../context/CartContext";
+import "./itemCount.css"
 
 const MySwal = withReactContent(Swal)
+
 export default function ItemCount({stock, initial, item}) {
     const [ cant, setCant ] = useState(0);
     const [count, setCount] = useState(initial);
+    const id = `${item.id}`;
+    const { addItem , cart, removeItem } = useContext(CartContext);
     
     const onAdd = ( cantidad, item )=>{
-        setCant(cantidad)
-        console.log( item );
-        
-        MySwal.fire({
-            title: <p>Su producto se agrego correctamente al carrito</p>,
-            icon: "success"
-        })
+        setCant(cantidad);
+        addItem( item, cantidad);
+        console.log(cart)
     }
 
     function suma() {
@@ -52,9 +52,9 @@ export default function ItemCount({stock, initial, item}) {
             </div>
             : <div className="container__boton__comprar">
                 <Link to="/cart" className="button botonComprar" >Ir al Carrito</Link>
+                <button className="button" onClick={()=>removeItem(id, item)}>Eliminar producto</button>
             </div>
             }
-            
         </div>
         
     )

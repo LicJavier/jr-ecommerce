@@ -1,4 +1,4 @@
-import ItemDetail from '../ItemDetail/ItemDetail';
+import ItemDetail from '../itemDetail/ItemDetail';
 import { productos } from '../../data/Json/productos';
 import React, { useState,useEffect } from "react";
 import { useParams} from "react-router-dom";
@@ -12,7 +12,7 @@ export default function ItemDetailContainer() {
             const traerProducto = new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve(productos[id])
-                }, 2000);
+                }, 500);
             })
             traerProducto.then((res)=>{
                 SetProduct(res)

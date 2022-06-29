@@ -1,0 +1,22 @@
+.main__nosotros{
+    display: flex;
+    justify-content: space-around;
+    background-color: #335;
+}
+.section__nosotros__colores{
+    width: 40%;
+}
+.titulo__colores__mandalas{
+    font-size: 2.5vmax;
+    text-align: center;
+    color: #fff;
+}
+.article__nosotros{
+    font-size: 1.5vmax;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+.article__nosotros li{
+    list-style-type: none;
+}
