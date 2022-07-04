@@ -11,7 +11,6 @@ export const CartProvider = ({children})=> {
     const [ cart, setCart] = useState([]);
 
     const addItem = ( item, cantidad)=>{
-        console.log(isInCart(item.id))
         if(cart.length === 0){
             setCart(
                 [{...item, cantidad }]
@@ -32,32 +31,33 @@ export const CartProvider = ({children})=> {
         }
     }
 
-    const removeItem = (id, item)=>{
-        console.log(id)
-        let arrayNuevo = cart;
-        let eliminable = cart.indexOf(item);
-        if (true) {
-            arrayNuevo.splice(eliminable,1)
-            setCart(arrayNuevo)
-            console.log("se removio con exito")
-            // no se actualiza el cart (utilizar useEfect(?))
-        }
+    const removeItem = (id)=>{
+        let cartNuevo = cart.filter((item)=> item.id !== id);
+        setCart(cartNuevo) ;
     }
     
     const checkContext = ()=> {
         console.log("chequeando el context")
     }
 
-    const clear = ()=>{
+    const clear = ()=>{ 
         setCart([])
         console.log(cart)
     }
-
+    function totalPrice(){
+        let total = 0;
+        let suma = 0
+        cart.forEach( item => {
+          total += suma + parseInt((item.price * item.cantidad));
+        })
+        console.log(total)
+        return total;
+    }
     function isInCart(id) {
         return cart.some( (objeto)=> objeto.id === id);
     }
     return(
-        <CartContext.Provider value={{ cart, checkContext, addItem, clear, removeItem }}>
+        <CartContext.Provider value={{ cart, checkContext, addItem, clear, removeItem, isInCart , totalPrice}}>
             {children}
         </CartContext.Provider>
     )

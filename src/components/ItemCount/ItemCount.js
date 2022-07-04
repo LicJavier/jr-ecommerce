@@ -10,13 +10,11 @@ const MySwal = withReactContent(Swal)
 export default function ItemCount({stock, initial, item}) {
     const [ cant, setCant ] = useState(0);
     const [count, setCount] = useState(initial);
-    const id = `${item.id}`;
     const { addItem , cart, removeItem } = useContext(CartContext);
     
     const onAdd = ( cantidad, item )=>{
         setCant(cantidad);
         addItem( item, cantidad);
-        console.log(cart)
     }
 
     function suma() {
@@ -52,7 +50,7 @@ export default function ItemCount({stock, initial, item}) {
             </div>
             : <div className="container__boton__comprar">
                 <Link to="/cart" className="button botonComprar" >Ir al Carrito</Link>
-                <button className="button" onClick={()=>removeItem(id, item)}>Eliminar producto</button>
+                <button className="button" onClick={ ()=> removeItem(item.id) }>Eliminar producto</button>
             </div>
             }
         </div>

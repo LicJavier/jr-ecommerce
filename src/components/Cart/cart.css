@@ -8,6 +8,19 @@
 div.container__item{
     text-align: center;
 }
+a.volver__home{
+text-align: center;
+text-decoration: none;
+justify-self: center;
+align-self: center;
+margin: 5em auto;
+}
+main.main__cart{
+    height: 25vmax;
+    display: flex;
+    justify-content: center;
+    background-color: #929;
+}
 .button {
     --bg: #000;
     --hover-bg: #ff90e8;
@@ -18,6 +31,7 @@ div.container__item{
     padding: 0.8em 2em;
     background: var(--bg);
     transition: 0.2s;
+    margin: .5em;
 }
 
 .button:hover {
@@ -30,4 +44,19 @@ div.container__item{
 .button:active {
     transform: translate(0);
     box-shadow: none;
+}
+div.container__productos__cart{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1em;
+}
+div.container__pedido{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
 }

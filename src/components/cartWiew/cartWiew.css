@@ -1,0 +1,15 @@
+div.container__cart__pedido{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2367;
+    margin: 0;
+    flex-direction: column;
+    border: 2px black solid;
+}
+.product__list{
+    margin: .5em;
+    padding: .5em;
+    color: #fff;
+}

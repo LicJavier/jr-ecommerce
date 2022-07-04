@@ -9,6 +9,7 @@ import Contact from './components/contact/Contact';
 import Cart from './components/cart/Cart';
 import Nosotros from './components/nosotros/Nosotros';
 import { CartProvider } from './context/CartContext';
+import CartWiew from './components/cartWiew/CartWiew';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Route path='/category/:idCategoria' element={<ItemListContainer />} />
             <Route path='/item/:id' element={<ItemDetailContainer />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/cart' element={<Cart />} />
+            <Route path='/Cart' element={<Cart />} />
             <Route path='/nosotros' element={<Nosotros />} />
           </Routes>
           <Footer />
