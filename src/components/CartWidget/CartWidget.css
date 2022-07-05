@@ -4,11 +4,11 @@
     align-items: center;
 }
 .container__carrito .icono__carrito img#logo__carrito{
-    height: 3vmax;
-    width: 3vmax;
+    height: 2vmax;
+    width: 2vmax;
     margin: 0.5 vmax;
 }
 .numero__carrito{
-    font-size: 3vmax;
+    font-size: 1.5svmax;
     margin: 0.5vmax;
 }

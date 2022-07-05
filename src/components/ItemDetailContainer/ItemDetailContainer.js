@@ -1,8 +1,7 @@
 import ItemDetail from '../itemDetail/ItemDetail';
 import React, { useState , useEffect, useContext } from "react";
 import { NavLink, useParams } from "react-router-dom";
-// import { getDetailItem } from "../../services/firebaseConfig";
-import { productos } from '../../data/Json/productos';
+import { getDetailItem } from "../../services/firebaseConfig";
 import { CartContext } from '../../context/CartContext';
 
 export default function ItemDetailContainer() {
@@ -13,28 +12,17 @@ export default function ItemDetailContainer() {
     console.log(isInCart(id))
     console.log(isLoading)
     
-    useEffect(
-        ()=>{
-            const traerProducto = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(productos[id])
-                    setIsLoading(false)
-                    
-                }, 3000);
-            })
-            traerProducto.then((res)=>{
-                SetProduct(res)
-            })
-        },  []
-    );
-            // useEffect(
-            //     ()=>{
-            //         getDetailItem( id )
-            //         .then( ( res ) =>{
-            //             SetProduct( res )
-            //         })
-            //     },  [id]
-            // );
+            useEffect(
+                ()=>{
+                    getDetailItem( id )
+                    .then( ( res ) =>{
+                        setTimeout(() => {
+                            SetProduct( res )
+                            setIsLoading(false)
+                        }, 3000);
+                    })
+                },  [id]
+            );
     return (
         <div>
             { isLoading 

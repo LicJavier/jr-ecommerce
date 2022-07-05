@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
-import { getFirestore, getDocs,doc, getDoc, collection } from "firebase/firestore";
+import { getFirestore, getDocs,doc, getDoc, collection, addDoc, Timestamp, query, where } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -41,13 +41,37 @@ export async function getDetailItem(id) {
 }
 
 export async function getCategoryItems(idCategoria) {
-    const productDetail = collection(  appFirestore , "productos" , idCategoria);
-    const productoSnapshot = await getDocs(productDetail)
+    const productCollection = collection(  appFirestore , "productos");
+    const q = query(productCollection, where("categoria", "==", idCategoria));
+
+    const productoSnapshot = await getDocs(q);
     let respuesta = productoSnapshot.docs.map(doc => {
         return{
             ...doc.data(),
-            categoria: doc.categoria
+            id: doc.id
         }
     })
         return respuesta;
 }
+// export async function createBuyOrder(dataOrder) {
+//     const orderCollection = collection(appFirestore, "orders");   
+//     const dateTimeStamp = Timestamp.now();
+//     const dataOrderDate ={
+//         {buyer: dataOrder.buyer,
+//               }
+//     }
+
+//     const orderCreated= await addDoc(orderCollection, dataOrder)
+//     return orderCreated
+// }
+// export async function exportDataFirebase() {
+//     const productos = []; 
+//     const productCollection = collection(appFirestore, "productos");
+
+//     const itemPrueba = productos[0];
+
+//     const newDoc = doc(productCollection);
+//     setDoc(newDoc, itemPrueba).then (res => {
+//         console.log("guardado")
+//     })
+// }
