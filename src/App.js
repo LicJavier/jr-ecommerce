@@ -9,7 +9,6 @@ import Contact from './components/contact/Contact';
 import Cart from './components/cart/Cart';
 import Nosotros from './components/nosotros/Nosotros';
 import { CartProvider } from './context/CartContext';
-import CartWiew from './components/cartWiew/CartWiew';
 
 function App() {
   return (

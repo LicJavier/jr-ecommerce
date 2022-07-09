@@ -2,8 +2,9 @@
     background-color: #929;
     margin: 0;
     display: flex;
+    align-items:center;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 div.container__item{
     text-align: center;
@@ -47,10 +48,12 @@ main.main__cart{
 }
 div.container__productos__cart{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: auto;
     padding: 1em;
-}
+    width: 80%;
+    }
 div.container__pedido{
     display: flex;
     flex-direction: column;
@@ -59,4 +62,19 @@ div.container__pedido{
     align-items: center;
     margin: 1em;
     padding: 1em;
+    width: 20%;
 }
+.container__componente__item{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+div.container__producto__cart{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vmax;
+    }

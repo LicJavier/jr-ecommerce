@@ -15,16 +15,19 @@ export default function Cart() {
             </main>
         )
     } else {
-        return( <div className="container__cart">
-        {cart.map((item) => (
-        <div className="container__productos__cart">
-            <Item className="producto__div" key={item.id} item={item} />
-            <button className="button" onClick={ ()=> removeItem(item.id) }>Eliminar producto</button>
-        </div>
-        ))}
-        <div className="container__pedido">
-            <CartWiew />
-        </div>
-    </div>)
+        return( 
+        <div className="container__cart">
+            <div className="container__productos__cart">
+                {cart.map((item) => (
+                    <div className="container__producto__cart">
+                        <Item className="producto__div" key={item.id} item={item} />
+                        <button className="button" onClick={ ()=> removeItem(item.id) }>Eliminar producto</button>
+                    </div>
+                ))}
+            </div>
+            <div className="container__pedido">
+                <CartWiew />
+            </div>
+        </div>)
     }
 }

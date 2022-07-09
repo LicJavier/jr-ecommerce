@@ -8,9 +8,7 @@ export default function ItemDetailContainer() {
     const [ product , SetProduct ] = useState( [] );
     const { id } = useParams();
     const[ isLoading , setIsLoading ] = useState(true);
-    const { cart, isInCart} = useContext(CartContext)
-    console.log(isInCart(id))
-    console.log(isLoading)
+    const { isInCart} = useContext(CartContext)
     
             useEffect(
                 ()=>{
@@ -19,7 +17,7 @@ export default function ItemDetailContainer() {
                         setTimeout(() => {
                             SetProduct( res )
                             setIsLoading(false)
-                        }, 3000);
+                        }, 500);
                     })
                 },  [id]
             );

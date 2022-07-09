@@ -3,9 +3,13 @@ import "./styles.css"
 export default function Nosotros() {
     return (
         <main className="main__nosotros">
-            <section className="section__nosotros__colores">
-                <h4 className="titulo__colores__mandalas">Los colores en las Mandalas</h4>
+            <section className="section__nosotros">
                 <article className="article__nosotros">
+                    <h3 className="tittle__nosotros">Nosotros</h3>
+                    <p>Mi nombre es Natalia y comencé con este emprendimiento hace 6 años, realizo mandalas a pedido, además recorremos las distintas ferias vecinales con los productos en stock.</p>
+                </article>
+                    <article className="article__colores">
+                <h4 className="titulo__colores__mandalas">Los colores en las Mandalas</h4>
                     <ul>
                         <li>
                             Blanco: el color perfecto. Es iluminación, pureza, nada.
@@ -38,7 +42,7 @@ export default function Nosotros() {
                             Violeta: espiritualidad, transformación.
                         </li>
                     </ul>
-                </article>
+                    </article>
             </section>
         </main>
     )

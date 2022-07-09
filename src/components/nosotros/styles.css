@@ -1,22 +1,36 @@
 .main__nosotros{
     display: flex;
     justify-content: space-around;
-    background-color: #335;
+    background-color: #359;
 }
-.section__nosotros__colores{
-    width: 40%;
+.section__nosotros{
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .titulo__colores__mandalas{
     font-size: 2.5vmax;
     text-align: center;
     color: #fff;
 }
-.article__nosotros{
-    font-size: 1.5vmax;
+.article__colores{
+    font-size: 1em;
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
+    padding: 1vmax;
 }
-.article__nosotros li{
+.article__colores li{
     list-style-type: none;
+}
+.article__nosotros{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em ;
+    margin: 1em;
+}
+.tittle__nosotros{
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }

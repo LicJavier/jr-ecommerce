@@ -9,7 +9,23 @@ div.container__cart__pedido{
     border: 2px black solid;
 }
 .product__list{
-    margin: .5em;
-    padding: .5em;
+    font-size: 1.2vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: .2em;
+    padding: .2em;
     color: #fff;
+}
+.botones__compra{
+    display: flex;
+}
+.container__buyer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4vmax;
+}
+.buyer__input{
+    font-size: 1.5vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

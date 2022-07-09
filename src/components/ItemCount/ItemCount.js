@@ -10,7 +10,7 @@ const MySwal = withReactContent(Swal)
 export default function ItemCount({stock, initial, item}) {
     const [ cant, setCant ] = useState(0);
     const [count, setCount] = useState(initial);
-    const { addItem , cart, removeItem } = useContext(CartContext);
+    const { addItem , removeItem } = useContext(CartContext);
     
     const onAdd = ( cantidad, item )=>{
         setCant(cantidad);

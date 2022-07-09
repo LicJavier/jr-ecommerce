@@ -42,7 +42,6 @@ export const CartProvider = ({children})=> {
 
     const clear = ()=>{ 
         setCart([])
-        console.log(cart)
     }
     function totalPrice(){
         let total = 0;
@@ -50,7 +49,6 @@ export const CartProvider = ({children})=> {
         cart.forEach( item => {
           total += suma + parseInt((item.price * item.cantidad));
         })
-        console.log(total)
         return total;
     }
     function isInCart(id) {
