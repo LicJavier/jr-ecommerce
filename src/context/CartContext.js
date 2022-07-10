@@ -36,9 +36,6 @@ export const CartProvider = ({children})=> {
         setCart(cartNuevo) ;
     }
     
-    const checkContext = ()=> {
-        console.log("chequeando el context")
-    }
 
     const clear = ()=>{ 
         setCart([])
@@ -55,7 +52,7 @@ export const CartProvider = ({children})=> {
         return cart.some( (objeto)=> objeto.id === id);
     }
     return(
-        <CartContext.Provider value={{ cart, checkContext, addItem, clear, removeItem, isInCart , totalPrice}}>
+        <CartContext.Provider value={{ cart, addItem, clear, removeItem, isInCart , totalPrice}}>
             {children}
         </CartContext.Provider>
     )

@@ -1,0 +1,9 @@
+.titulo__principal{
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #9e00c5;
+    color: #fff;
+    padding: 1vmax;
+    margin: 0;
+}

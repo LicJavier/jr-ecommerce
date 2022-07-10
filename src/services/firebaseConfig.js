@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
-import { getFirestore, getDocs,doc, getDoc, collection, addDoc, Timestamp, query, where } from "firebase/firestore";
+import { getFirestore, getDocs,doc, getDoc, collection, addDoc, Timestamp, query, where, setDoc } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -53,25 +53,17 @@ export async function getCategoryItems(idCategoria) {
     })
         return respuesta;
 }
-// export async function createBuyOrder(dataOrder) {
-//     const orderCollection = collection(appFirestore, "orders");   
-//     const dateTimeStamp = Timestamp.now();
-//     const dataOrderDate ={
-//         {buyer: dataOrder.buyer,
-//               }
-//     }
 
-//     const orderCreated= await addDoc(orderCollection, dataOrder)
-//     return orderCreated
-// }
-// export async function exportDataFirebase() {
-//     const productos = []; 
-//     const productCollection = collection(appFirestore, "productos");
+export async function createBuyOrder(dataOrder) {
+    const ordersCollection = collection(appFirestore, "orders");  
+    
 
-//     const itemPrueba = productos[0];
+    const dateTimestamp = Timestamp.now();
+    const dataOrderDate ={
+        ...dataOrder,
+        date: dateTimestamp
+    }    
+    const orderCreated= await addDoc(ordersCollection, dataOrderDate)
 
-//     const newDoc = doc(productCollection);
-//     setDoc(newDoc, itemPrueba).then (res => {
-//         console.log("guardado")
-//     })
-// }
+    return orderCreated
+}

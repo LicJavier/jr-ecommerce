@@ -19,8 +19,8 @@ export default function Cart() {
         <div className="container__cart">
             <div className="container__productos__cart">
                 {cart.map((item) => (
-                    <div className="container__producto__cart">
-                        <Item className="producto__div" key={item.id} item={item} />
+                    <div key={item.id} className="container__producto__cart">
+                        <Item className="producto__div"  item={item} />
                         <button className="button" onClick={ ()=> removeItem(item.id) }>Eliminar producto</button>
                     </div>
                 ))}

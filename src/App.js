@@ -9,26 +9,30 @@ import Contact from './components/contact/Contact';
 import Cart from './components/cart/Cart';
 import Nosotros from './components/nosotros/Nosotros';
 import { CartProvider } from './context/CartContext';
+import Checkout from './components/checkout/Checkout';
+import { OrderProvider } from './context/OrderContext';
 
 function App() {
   return (
     <div className="App">
       <CartProvider>
-        <BrowserRouter>
-          <NavBar/>
-          <Title />
-          <Routes>
-            <Route path='/' element={<ItemListContainer />} />
-            <Route path='/category/:idCategoria' element={<ItemListContainer />} />
-            <Route path='/item/:id' element={<ItemDetailContainer />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/Cart' element={<Cart />} />
-            <Route path='/nosotros' element={<Nosotros />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
+        <OrderProvider>
+          <BrowserRouter>
+            <NavBar/>
+            <Title />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/category/:idCategoria' element={<ItemListContainer />} />
+              <Route path='/item/:id' element={<ItemDetailContainer />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/Cart' element={<Cart />} />
+              <Route path='/nosotros' element={<Nosotros />} />
+              <Route path='/checkout' element={<Checkout />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </OrderProvider>
       </CartProvider>
-      
     </div>
   );
 }

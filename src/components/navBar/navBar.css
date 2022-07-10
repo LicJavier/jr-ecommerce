@@ -1,7 +1,7 @@
 .nav_main{
-    color: #222;
+
     width: 100%;
-    background-color: #f228;
+    background-color: #9e00c5;
     align-items: center;
     display: flex;
 }
@@ -20,7 +20,8 @@
     list-style: none;
     font-size: 1.5rem;
     text-decoration: none;
-    color: #222;
+    color: #000;
+    font-weight: bold;
 }
 .ul_main img#logo__brand{
     width: 15vmax;

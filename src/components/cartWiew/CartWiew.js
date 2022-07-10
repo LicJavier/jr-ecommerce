@@ -3,15 +3,13 @@ import { CartContext } from "../../context/CartContext";
 import "./cartWiew.css"
 import {createBuyOrder} from "../../services/firebaseConfig";
 import BuyerForm from "../buyerForm/BuyerForm";
+import { Link } from "react-router-dom";
+import { OrderContext } from "../../context/OrderContext";
+
 export default function CartWiew() {
+    const { saveOrder , dataOrder , setDataOrder } = useContext(OrderContext);
     const { cart , totalPrice , clear } = useContext( CartContext )
-    const [ dataOrder, setDataOrder ] = useState(
-        {
-            name:"",
-            email:"",
-            phone:0
-        }
-    )
+
         let totalOrder = totalPrice();
     function handleChange(evt) {
         const input = evt.target.name;
@@ -26,14 +24,13 @@ export default function CartWiew() {
 
     function handlerBuy() {
         
-        console.table(dataOrder)
-        // createBuyOrder(dataOrder).then( (orderDataCreated)=>{
-        //     clear();
-        //     console.log(orderDataCreated.id)
-        // })
+        createBuyOrder(dataOrder).then( (orderCreated)=>{
+            clear();
+            saveOrder(orderCreated)
+        })
         
     }
-
+    
     return(
             <div className="container__cart__wiew">
                 <div className="container__cart__pedido">
@@ -52,9 +49,10 @@ export default function CartWiew() {
                 <BuyerForm type="email" text="Correo" onChange={handleChange} />
                 <BuyerForm type="phone" text="Telefono" onChange={handleChange} />                
                 <div className="botones__compra">
-                    <button className="button" onClick={handlerBuy}>Terminar Compra</button>
+                    <Link to="/checkout" className="button" onClick={handlerBuy}>Terminar Compra</Link>
                     <button className="button" onClick={clear}>Vaciar carrito</button>
                 </div>
             </div>
     )
+            
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    background-color: #2F2;
+    background-color: #ff79b0;
     padding: 3vmax;
     font-size: 2vmax;
     text-align: center;
@@ -21,8 +21,8 @@
     font-size: 2vmax;
 }
 .cargando__producto{
-    background-color: #2F2;
-    color: #831;
+    background-color: #ff79b0;
+    color: #111;
     text-align: center;
     margin: 0;
     padding: 1em;
@@ -33,5 +33,5 @@ div.terminar__compra{
     padding: 5vmax;
     justify-content: center;
     align-items: center;
-    background-color: #2F2;
+    background-color: #ff79b0;
 }

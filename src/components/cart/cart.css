@@ -1,5 +1,5 @@
 .container__cart{
-    background-color: #929;
+    background-color: #ff79b0;
     margin: 0;
     display: flex;
     align-items:center;
@@ -20,7 +20,7 @@ main.main__cart{
     height: 25vmax;
     display: flex;
     justify-content: center;
-    background-color: #929;
+    background-color: #ff79b0;
 }
 .button {
     --bg: #000;
