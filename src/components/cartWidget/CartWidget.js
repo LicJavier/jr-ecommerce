@@ -1,5 +1,4 @@
 import "./cartWidget.css";
-import 'boxicons';
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
