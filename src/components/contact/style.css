@@ -1,0 +1,18 @@
+.container__galery{
+    background-color: #ff79b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.galery__pics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.galery__pics img{
+    object-fit: contain;
+    width: 25vmax;
+    height: 25vmax;
+    margin: 3vmax;
+}

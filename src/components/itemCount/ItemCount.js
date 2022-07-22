@@ -49,8 +49,8 @@ export default function ItemCount({stock, initial, item}) {
                 <button className='button' onClick={ ()=>onAdd( count, item ) } >Agregar al Carrito</button>
             </div>
             : <div className="container__boton__comprar">
-                <Link to="/cart" className="button botonComprar" >Ir al Carrito</Link>
-                <button className="button" onClick={ ()=> removeItem(item.id) }>Eliminar producto</button>
+                <Link to="/cart" className="button botonDetail" >Ir al Carrito</Link>
+                <button className="button botonDetail" onClick={ ()=> removeItem(item.id) }>Eliminar producto</button>
             </div>
             }
         </div>

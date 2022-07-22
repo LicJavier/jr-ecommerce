@@ -36,6 +36,13 @@ export const CartProvider = ({children})=> {
         setCart(cartNuevo) ;
     }
     
+    function cantCart(){
+        let cantidadTotal = 0;
+        cart.forEach(
+            (item)=>  (cantidadTotal = cantidadTotal + item.cantidad)
+        );
+        return cantidadTotal
+    }
 
     const clear = ()=>{ 
         setCart([])
@@ -52,7 +59,7 @@ export const CartProvider = ({children})=> {
         return cart.some( (objeto)=> objeto.id === id);
     }
     return(
-        <CartContext.Provider value={{ cart, addItem, clear, removeItem, isInCart , totalPrice}}>
+        <CartContext.Provider value={{ cart, addItem, clear, removeItem, isInCart , totalPrice , cantCart }}>
             {children}
         </CartContext.Provider>
     )

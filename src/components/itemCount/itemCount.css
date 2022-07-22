@@ -9,6 +9,7 @@
 }
 .contador{
     font-size: 1vmax;
+    color: #000;
 }
 /* From uiverse.io by @satyamchaudharydev */
 /* inspired form gumroad website */
@@ -19,9 +20,11 @@
     color: #fff;
     border: 1px solid var(--bg);
     border-radius: 4px;
-    padding: 0.8em 2em;
+    padding: 0.5em 1em;
     background: var(--bg);
     transition: 0.2s;
+    font-size: 1vmax;
+    text-decoration: none;
   }
   
   .button:hover {

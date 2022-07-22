@@ -9,7 +9,6 @@ import { OrderContext } from "../../context/OrderContext";
 export default function CartWiew() {
     const { saveOrder , dataOrder , setDataOrder } = useContext(OrderContext);
     const { cart , totalPrice , clear } = useContext( CartContext )
-
         let totalOrder = totalPrice();
     function handleChange(evt) {
         const input = evt.target.name;
@@ -28,7 +27,6 @@ export default function CartWiew() {
             clear();
             saveOrder(orderCreated)
         })
-        
     }
     
     return(
@@ -45,11 +43,15 @@ export default function CartWiew() {
                     }
                     <h3 className="product__list" >Precio Final: $ {totalPrice()}</h3>
                 </div>
-                <BuyerForm type="name" text="Nombre" onChange={handleChange} />
-                <BuyerForm type="email" text="Correo" onChange={handleChange} />
-                <BuyerForm type="phone" text="Telefono" onChange={handleChange} />                
+                <div>
+                    <BuyerForm type="name" text="Nombre" onChange={handleChange} />
+                    <BuyerForm type="surname" text="Apellido" onChange={handleChange} />
+                    <BuyerForm type="email" text="Correo" onChange={handleChange}  />
+                    <BuyerForm type="email2" text="Reingresa tu correo" onChange={handleChange} />
+                    <BuyerForm type="phone" text="Telefono" onChange={handleChange} />
+                </div>                
                 <div className="botones__compra">
-                    <Link to="/checkout" className="button" onClick={handlerBuy}>Terminar Compra</Link>
+                    {(dataOrder.email) === (dataOrder.email2) && <Link to="/checkout" className="button" onClick={handlerBuy}>Terminar Compra</Link>}
                     <button className="button" onClick={clear}>Vaciar carrito</button>
                 </div>
             </div>

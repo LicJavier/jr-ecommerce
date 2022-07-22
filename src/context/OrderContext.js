@@ -8,6 +8,7 @@ export const OrderProvider = ({children})=> {
     const [ order , setOrder] = useState([]);
     const [ dataOrder, setDataOrder ] = useState({
         name:"",
+        surname:"",
         email:"",
         phone:0,
         items:cart
@@ -24,5 +25,3 @@ export const OrderProvider = ({children})=> {
         </OrderContext.Provider>
     )
 }
-    
-    

@@ -1,5 +1,6 @@
 .container__item{
     margin: 1vmax;
+    color: #000;
 }
 .container__item h4{
     margin: 0.5em;

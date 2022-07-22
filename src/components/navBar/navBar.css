@@ -18,12 +18,16 @@
 }
 .ul_main a{
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 2vmax;
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    text-align: center;
 }
 .ul_main img#logo__brand{
     width: 15vmax;
     height: 10vmax;
+}
+ul.dropdown-menu{
+    background-color: #9e00c5;
 }

@@ -18,6 +18,7 @@ export default function ItemDetail({ item }) {
                 <p>Descripción: {item.description}</p>
                 <CountContainer item={item} stock={item.stock} />
             </div>
+            <p>*Consultar por envío y stock, los productos pueden demorar si se realizan personalizados.</p>
         </div>
     )
 }
